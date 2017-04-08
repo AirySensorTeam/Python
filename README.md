@@ -7,5 +7,7 @@ Reads data from receiver through serial ports, displays status of three sensors 
 Dependencies:
 
 pyserial: https://pythonhosted.org/pyserial/
+
 tkinter: https://wiki.python.org/moin/TkInter
+
 ubidots: https://github.com/ubidots/ubidots-python
