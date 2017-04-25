@@ -102,6 +102,10 @@ def run():
 
 root = Tk()  
 root.title("Hub")
+root.columnconfigure(1, weight=1)
+root.columnconfigure(2, weight=1)
+root.columnconfigure(3, weight=1)
+root.rowconfigure(0, weight=1)
 
 Receiver = serial.Serial('com4', 57600, timeout = 0.002)
 
@@ -122,15 +126,15 @@ DrawerClose = PhotoImage(file='Drawer_CLOSE.gif')
 
 
 DoorStatLabel = Label(root, image=DoorOpen)
-DoorStatLabel.grid(row = 0, column = 1)
+DoorStatLabel.grid(row = 0, column = 1, sticky = "nesw")
 
 
 WindowStatLabel = Label(root, image=WindowOpen)
-WindowStatLabel.grid(row = 0, column = 2)
+WindowStatLabel.grid(row = 0, column = 2, sticky = "nesw")
 
 
 DrawerStatLabel = Label(root, image=DrawerOpen)
-DrawerStatLabel.grid(row = 0, column = 3)
+DrawerStatLabel.grid(row = 0, column = 3, sticky = "nesw")
 
 ##ComPorts = Listbox(root, width=20, height=6)
 ##ComPorts.grid(row=1, column=2)
